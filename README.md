@@ -1,3 +1,4 @@
++[![Code Climate](https://codeclimate.com/github/alinakhabachova/cdp-infrastructure-3.png)](https://codeclimate.com/github/alinakhabachova/cdp-infrastructure-3)
 # cdp-gulp
 Repository for practice part of CDP training "Task runners".
 
