@@ -1,0 +1,20 @@
+### Node template
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+bower_components
+
+### JetBrains folder
+.idea
+
+### Build folders
+build
+
+
+src/images/build
+src/less/build
+
