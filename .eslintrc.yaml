@@ -10,11 +10,6 @@
     something: true
 
   rules:
-    indent:
-      - 2
-      -
-        SwitchCase: 1
-        VariableDeclarator: 1
     comma-dangle:
       - error
       - never
