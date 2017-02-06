@@ -138,8 +138,15 @@ gulp.task('html', ['clean'], function () {
         .pipe(gulp.dest(conf.build.html));
 });
 
+gulp.task('build', ['bundle', 'html'], function () {
 
-gulp.task('build', ['clean', 'images', 'html'], function (callback) {
+});
+
+gulp.task('build:prod', ['bundle:prod', 'html'], function () {
+
+});
+
+gulp.task('bundle', ['clean', 'images'], function (callback) {
     webpack(Object.assign(myConfig, {
         devtool: 'source-map',
         output: {
@@ -151,7 +158,7 @@ gulp.task('build', ['clean', 'images', 'html'], function (callback) {
     });
 });
 
-gulp.task('build:prod', ['clean', 'images', 'html'], function (callback) {
+gulp.task('bundle:prod', ['clean', 'images'], function (callback) {
     // run webpack
     webpack(Object.assign(myConfig, {
         output: {
@@ -171,7 +178,7 @@ gulp.task('build:prod', ['clean', 'images', 'html'], function (callback) {
     });
 });
 
-gulp.task("watch-bundle", ['clean', 'images'], function (callback) {
+gulp.task("watch-bundle", ['clean', 'images', 'html'], function (callback) {
     // Start a webpack-dev-server
     var compiler = webpack(Object.assign(myConfig, {
         devtool: 'source-map',
@@ -188,7 +195,7 @@ gulp.task("watch-bundle", ['clean', 'images'], function (callback) {
     });
 });
 
-gulp.task('watch', ['watch-bundle', 'html'], function (callback) {
+gulp.task('watch', ['watch-bundle', 'html'], function () {
 
 });
 
